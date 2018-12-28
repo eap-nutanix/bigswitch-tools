@@ -1,6 +1,7 @@
 # bigswitch-tools
 
-show_xfabric.py - iterates through all fabrics, producing endpoint count for each fabric and grand total for fabric at end
+show_xfabric.py - iterates through all fabrics, producing endpoint count for each tenant in each fabric and grand total for fabric at end.
+
 Sample output:
 ```
 $ python show_xfabric.py 
