@@ -1,5 +1,6 @@
 # bigswitch-tools
 Sample output:
+```
 $ python show_xfabric.py 
 tenant                    BCF1  BCF2  BCF3  BCF4    
 IT-Staging                0     -     -     -       
@@ -28,3 +29,4 @@ eng-cdp-dr                2357  -     -     -
 it-build-infra            690   -     -     -    
 it-ericpearce             14    -     14    0    
 TOTAL                     7014  14048 914   1330
+```
