@@ -1,5 +1,9 @@
 # bigswitch-tools
 
+Eric Pearce eric.pearce@nutanix.com
+
+I do not claim to have written all code myself - fragments may be recognizable as coming from stackoverflow or other python examples. Use at your own risk.
+
 **show_xfabric.py** - iterates through all fabrics, producing endpoint count for each tenant in each fabric and grand total for fabric at end.  A '-' means tenant is not present in that fabric.
 
 Sample output:
