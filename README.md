@@ -2,9 +2,9 @@
 
 Eric Pearce eric.pearce@nutanix.com
 
-I do not claim to have written all code myself - fragments may be recognizable as coming from stackoverflow or other python examples. Use at your own risk.
+I do not claim to have written all code myself - fragments may be recognizable as coming from stackoverflow or other python examples. Use at your own risk.  Beware that the script is hardcoded to our particular environment (see bottom).
 
-**show_xfabric.py** - iterates through all fabrics, producing endpoint count for each tenant in each fabric and grand total for fabric at end.  A '-' means tenant is not present in that fabric.
+**show_xfabric.py** - iterates through all fabrics, producing endpoint count for each tenant in each fabric and grand total for fabric at end.  A '-' symbol means tenant is not present in that fabric.
 
 Sample output:
 ```
@@ -37,3 +37,24 @@ it-build-infra            690   -     -     -
 it-ericpearce             14    -     14    0    
 TOTAL                     7014  14048 914   1330
 ```
+
+There are several hard-coded parameters that you will have to customize for your environment:
+*Fabric Username and Password:*
+  data = '{"user": "readonly", "password": "password"}'
+*Controller IPs and names:*
+   controllers = {
+          "10.1.1.10":"BCF1",
+          "10.1.1.20":"BCF2",
+          "10.1.1.30":"BCF3",
+          "10.1.1.40":"BCF4",
+         }
+*Controller names:*
+             tenant_all[name]['BCF1'] = '-'
+             tenant_all[name]['BCF2'] = '-'
+             tenant_all[name]['BCF3'] = '-'
+             tenant_all[name]['BCF4'] = '-'
+*Number of and names of controllers:*
+   print "%-25s %-5s %-5s %-5s %-5s" % ("tenant","BCF1","BCF2","BCF3","BCF4")
+   for tenant_name, fabrics in tenant_all.items():
+       print "%-25s %-5s %-5s %-5s %-5s" % (tenant_name,fabrics['BCF1'],fabrics['BCF2'],fabrics['BCF3'],fabrics['BCF4'])
+   print "%-25s %-5s %-5s %-5s %-5s" % ("TOTAL",eptotal["BCF1"],eptotal["BCF2"],eptotal["BCF3"],eptotal["BCF4"])
