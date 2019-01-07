@@ -40,21 +40,29 @@ TOTAL                     7014  14048 914   1330
 
 There are several hard-coded parameters that you will have to customize for your environment:
 *Fabric Username and Password:*
+```
   data = '{"user": "readonly", "password": "password"}'
+```
 *Controller IPs and names:*
+```
    controllers = {
           "10.1.1.10":"BCF1",
           "10.1.1.20":"BCF2",
           "10.1.1.30":"BCF3",
           "10.1.1.40":"BCF4",
          }
+```
 *Controller names:*
+```
              tenant_all[name]['BCF1'] = '-'
              tenant_all[name]['BCF2'] = '-'
              tenant_all[name]['BCF3'] = '-'
              tenant_all[name]['BCF4'] = '-'
+```
 *Number of and names of controllers:*
+```
    print "%-25s %-5s %-5s %-5s %-5s" % ("tenant","BCF1","BCF2","BCF3","BCF4")
    for tenant_name, fabrics in tenant_all.items():
        print "%-25s %-5s %-5s %-5s %-5s" % (tenant_name,fabrics['BCF1'],fabrics['BCF2'],fabrics['BCF3'],fabrics['BCF4'])
    print "%-25s %-5s %-5s %-5s %-5s" % ("TOTAL",eptotal["BCF1"],eptotal["BCF2"],eptotal["BCF3"],eptotal["BCF4"])
+```
