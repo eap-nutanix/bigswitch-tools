@@ -86,3 +86,11 @@ BCF4 it-eric-pearce p4r6r02-leaf2 ethernet27:2 untagged miette-1
 BCF4 it-eric-pearce p4r6r02-leaf2 ethernet27:3 untagged miette-3
 ```
 This is mainly for people handling tickets, as all they get from the customer is a hostname, and they need to map this to a bunch of attributes in order to debug the issue.
+
+** get_controllers.py ** - Helper to find which controller to talk to for a given tenant name (should not be needed after MCD is available)
+```
+# python get_tenant.py it-eric-pearce
+get_controllers = ['10.4.6.3', '10.4.6.4']
+# python get_tenant.py it-eric-pearc
+get_controllers = None
+```
