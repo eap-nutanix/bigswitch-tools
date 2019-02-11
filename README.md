@@ -67,7 +67,7 @@ There are several hard-coded parameters that you will have to customize for your
    print "%-25s %-5s %-5s %-5s %-5s" % ("TOTAL",eptotal["BCF1"],eptotal["BCF2"],eptotal["BCF3"],eptotal["BCF4"])
 ```
 **search_xfabric.py** -- Search for LLDP-provided hostname across fabrics - displays fabric, tenant, switch, port, vlan and all hostname matches using Unix-style wildcards:
-
+```
 # python search_xfabric.py 'iguanodon1*'
 BCF5 eng-systems-qa-2x5 p5r7r11-leaf1 ethernet11:4 untagged Iguanodon10-4
 BCF5 eng-systems-qa-2x5 p5r7r11-leaf1 ethernet11:1 untagged Iguanodon10-1
@@ -84,5 +84,5 @@ BCF4 it-eric-pearce p4r6r02-leaf1 ethernet27:3 untagged miette-3
 BCF4 it-eric-pearce p4r6r02-leaf2 ethernet27:1 untagged miette-2
 BCF4 it-eric-pearce p4r6r02-leaf2 ethernet27:2 untagged miette-1
 BCF4 it-eric-pearce p4r6r02-leaf2 ethernet27:3 untagged miette-3
-
+```
 This is mainly for people handling tickets, as all they get from the customer is a hostname, and they need to map this to a bunch of attributes in order to debug the issue.
