@@ -94,7 +94,7 @@ get_controllers = ['10.4.6.3', '10.4.6.4']
 # python get_tenant.py it-eric-pearc
 get_controllers = None
 ```
-**findip.py** - Search all fabrics for IP address and print fabric, tenant, segment, vlan and matching IP
+**findip.py** - Search all fabrics for IP address and print fabric, tenant, segment, vlan and matching IP. Beware this is quite slow, as it produces an endpoint list for every fabric and searches it in a linear fashion.
 ```
 # python findip.py 10.5.9.24
 BCF4 it-eric-pearce p4r6r02-leaf1:ethernet27:4 host-cvm untagged 10.5.9.24
