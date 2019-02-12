@@ -66,7 +66,7 @@ There are several hard-coded parameters that you will have to customize for your
        print "%-25s %-5s %-5s %-5s %-5s" % (tenant_name,fabrics['BCF1'],fabrics['BCF2'],fabrics['BCF3'],fabrics['BCF4'])
    print "%-25s %-5s %-5s %-5s %-5s" % ("TOTAL",eptotal["BCF1"],eptotal["BCF2"],eptotal["BCF3"],eptotal["BCF4"])
 ```
-**search_xfabric.py** -- Search for LLDP-provided hostname across fabrics - displays fabric, tenant, switch, port, vlan and all hostname matches using Unix-style wildcards:
+**search_xfabric.py** -- Search for LLDP-provided hostname across fabrics - displays fabric, tenant, switch, port, vlan and all hostnames matched using Unix-shell style wildcards:
 ```
 # python search_xfabric.py 'iguanodon1*'
 BCF5 eng-systems-qa-2x5 p5r7r11-leaf1 ethernet11:4 untagged Iguanodon10-4
